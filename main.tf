@@ -3,9 +3,15 @@ provider "aws" {
     region = "us-west-2"
 }
 
-variable vpc_cidr_block {}
-variable subnet_cidr_block {}
-variable availability_zone {}
+variable vpc_cidr_block {
+  default = "10.0.0.0/16"
+}
+variable subnet_cidr_block {
+  default = "10.0.15.0/24"
+}
+variable availability_zone {
+  default = "us-west-2a"
+}
 
 resource "aws_vpc" "tf_vpc_majid" {
   cidr_block       = var.vpc_cidr_block
