@@ -10,7 +10,7 @@ variable subnet_cidr_block {
   default = "10.0.15.0/24"
 }
 variable availability_zone {
-  default = "us-west-2a"
+  default = "us-east-1a"
 }
 
 resource "aws_vpc" "tf_vpc_majid" {
